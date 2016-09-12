@@ -94,7 +94,7 @@ func (t *TowerAOI) GetIdsByRange(pos *Position, r int, types []int) map[int]map[
 
 // Get all object ids from tower aoi by pos and range
 func (t *TowerAOI) GetIdsByPos(pos *Position, r int) []int64 {
-	if t.checkPos(pos) || r < 0 {
+	if !t.checkPos(pos) || r < 0 {
 		return nil
 	}
 
